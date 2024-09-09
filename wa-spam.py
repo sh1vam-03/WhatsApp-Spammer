@@ -11,6 +11,121 @@ import random
 import string
 import os
 
+# Help section for new users
+def tool_help():
+    print(Fore.RED + """
+    _  _ ____ _    ___     ____ ____ ____ ___ _ ____ _  _    
+    |__| |___ |    |__]    [__  |___ |     |  | |  | |- |    
+    |  | |___ |___ |       ___] |___ |___  |  | |__| | -|    
+                                                         
+""" + Style.RESET_ALL + Fore.GREEN + """
+             
+Features """ + Style.RESET_ALL + Fore.MAGENTA + """
+        - User-Typed Message:""" + Style.RESET_ALL + Fore.BLUE + """ Manually type and send messages repeatedly. """ + Style.RESET_ALL + Fore.MAGENTA + """
+        - Auto-Typed Message:""" + Style.RESET_ALL + Fore.BLUE + """ Automated message-sending options: """ + Style.RESET_ALL + Fore.LIGHTYELLOW_EX + """
+            - Message with Counting:""" + Style.RESET_ALL + Fore.BLUE + """ Sends sequentially numbered messages. """ + Style.RESET_ALL + Fore.LIGHTYELLOW_EX + """
+            - Random Message Generator:""" + Style.RESET_ALL + Fore.BLUE + """ Sends messages with random words or sentences. """ + Style.RESET_ALL + Fore.LIGHTYELLOW_EX + """
+            - Meaningless Message Generator:""" + Style.RESET_ALL + Fore.BLUE + """ Sends messages with random, nonsensical content.
+        """ + Style.RESET_ALL + Fore.RED + """
+          
+Help Section """ + Style.RESET_ALL + Fore.GREEN + """
+
+Main Menu """ + Style.RESET_ALL + Fore.BLUE + """
+            Choose an option from the following:
+            - [1] User Typed Message
+            - [2] Auto Typed Message
+            - [4] Help
+            - [0] Quit
+            - Enter Option -> """ + Style.RESET_ALL + Fore.MAGENTA + """
+
+
+
+[1] User Typed Message (Option 1) """ + Style.RESET_ALL + Fore.BLUE + """
+    - Selecting this option allows you to manually input messages that will be sent repeatedly.
+            You will be prompted with:
+            - [*] User typed message <SELECTED>
+            - [N] How many messages do you have?
+            - [0] Enter 0 to quit and exit tool.
+            - [+] Enter Number of Messages (Default: 1) -> 
+            Enter the number of messages you want to send. The default is 1. Enter 0 to quit.
+
+            Next, you will be asked to enter your message:
+            - [+] Enter your message here (default [ERROR!]) -> 
+
+
+            Specify how many times you want the message to be sent:
+            - [N] How many times would you like to send these messages?
+            - [0] Enter 0 to quit and exit tool.
+            - [+] Enter Number of Times (Default: 1) -> 
+
+
+    - After inputting the required details, move your cursor to the message box in WhatsApp and prepare to send the messages.
+
+    - You will receive a final prompt:
+        - [ALERT!!!] Now you have only 10 seconds to move the cursor on message box tab.
+
+    - After 10 second messages will be sent, and you will see:
+        - Message Sent...
+        - The given task has been completed.
+
+Then you will be returned to the main menu to choose the next task or quit.
+""" + Style.RESET_ALL + Fore.MAGENTA + """
+
+
+[2] Auto Typed Message (Option 2) """ + Style.RESET_ALL + Fore.BLUE + """
+
+        Select this option for automated message-sending functionalities:
+            - [*] Auto typed message <SELECTED>
+            - Choose an option from the following:
+            - [1] Message with Counting
+            - [2] Random Message Generator
+            - [3] Meaningless Message Generator
+            - [0] Quit
+            - [+] Enter Option -> """ + Style.RESET_ALL + Fore.LIGHTYELLOW_EX + """
+
+
+        [1] Message with Counting (Sub-option 1) """ + Style.RESET_ALL + Fore.BLUE + """
+            - Enter the number of messages to send:
+                - [N] How many messages do you want to send?
+                - [0] Enter 0 to quit and exit tool.
+                - [+] Enter Number of Messages (Default: 1) ->
+          
+
+            - Input the message to be sent with counting:
+                - [N] Enter the message you want to send with counting
+                    -The message looks like [Message 1]
+                - [0] Enter 0 to quit and exit tool.
+                - [+] Enter Your Message (Default: ERROR) -> 
+Prepare to send messages as per the instructions provided. """ + Style.RESET_ALL + Fore.LIGHTYELLOW_EX + """
+
+
+        [2] Random Message Generator (Sub-option 2) """ + Style.RESET_ALL + Fore.BLUE + """
+            - Enter the number of messages:
+                - [N] How many messages do you want to send?
+                - [0] Enter 0 to quit and exit tool.
+                - [+] Enter Number of Messages (Default: 1) -> 
+
+            - Specify the number of words per message:
+                - [N] How many words can each message contain?
+                - [0] Enter 0 to quit and exit tool.
+                - [+] Enter Length of Message (Default: 1 Word) -> """ + Style.RESET_ALL + Fore.LIGHTYELLOW_EX + """
+
+        [3] Meaningless Message Generator (Sub-option 3) """ + Style.RESET_ALL + Fore.BLUE + """
+            - Enter the number of messages:
+                - [N] How many messages do you want to send?
+                - [0] Enter 0 to quit and exit tool.
+                - [+] Enter Number of Messages (Default: 1) -> 
+
+            - Specify the number of words per message:
+                - [N] How many words can each message contain?
+                - [0] Enter 0 to quit and exit tool.
+                - [+] Enter Length of Message (Default: 1 Word) -> 
+For all auto-typed options, you will be prompted to prepare WhatsApp for sending messages, with a 10-second alert.
+
+
+""" + Style.RESET_ALL)
+    spammer()
+
 
 # User is able to type a message and send what they want
 def user_typed_message():
@@ -57,7 +172,7 @@ def user_typed_message():
             # Try to convert the input to an integer
             number_of_smg = int(number_of_smg)
         except ValueError:
-            print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL, end="")
+            print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL, end="")
             time.sleep(1.5)
             user_typed_message()
     
@@ -80,10 +195,14 @@ def user_typed_message():
                 # send a messages
                 pyautogui.press('enter')
                 print("Message Sended...")
+        # Show message after Task is completed and Ask What is next task
+        print(Fore.GREEN + Style.BRIGHT + "The given task has been completed.\n\n"+ Style.RESET_ALL)
+        print(Fore.BLUE + Style.BRIGHT + "What is the next task?\nIf there are no more tasks, you can quit or exit the tool by using '0'."+ Style.RESET_ALL)
+        spammer()
     elif user_is_ready == "0":
         exit_from_tool()
     else:
-        print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL)
+        print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL)
         time.sleep(1.5)
         user_typed_message()
 
@@ -104,7 +223,7 @@ def message_with_counting():
         try :
             no_of_messages = int(no_of_messages)
         except:
-            print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL, end="")
+            print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL, end="")
             time.sleep(1.5)
             # Recall random_message_generator if user enter wrong value
             message_with_counting()
@@ -136,10 +255,14 @@ def message_with_counting():
             # send a messages
             pyautogui.press('enter')
             print("Message Sended...")
+        # Show message after Task is completed and Ask What is next task
+        print(Fore.GREEN + Style.BRIGHT + "The given task has been completed.\n\n"+ Style.RESET_ALL)
+        print(Fore.BLUE + Style.BRIGHT + "What is the next task?\nIf there are no more tasks, you can quit or exit the tool by using '0'."+ Style.RESET_ALL)
+        spammer()
     elif user_is_ready == "0":
         exit_from_tool()
     else:
-        print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL)
+        print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL)
         time.sleep(1.5)
         message_with_counting()
 
@@ -173,7 +296,7 @@ def random_message_generator():
         try :
             no_of_message = int(no_of_message)
         except:
-            print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL, end="")
+            print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL, end="")
             time.sleep(1.5)
             # Recall random_message_generator if user enter wrong value
             random_message_generator()
@@ -191,7 +314,7 @@ def random_message_generator():
         try :
             message_length = int(message_length)
         except:
-            print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL, end="")
+            print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL, end="")
             time.sleep(1.5)
             # Recall random_message_generator if user enter wrong value
             random_message_generator()
@@ -223,11 +346,15 @@ def random_message_generator():
             pyautogui.write(message)
             # send a messages
             pyautogui.press('enter')
-            print("Message Sended...") 
+            print("Message Sended...")
+        # Show message after Task is completed and Ask What is next task
+        print(Fore.GREEN + Style.BRIGHT + "The given task has been completed.\n\n"+ Style.RESET_ALL)
+        print(Fore.BLUE + Style.BRIGHT + "What is the next task?\nIf there are no more tasks, you can quit or exit the tool by using '0'."+ Style.RESET_ALL)
+        spammer()
     elif user_is_ready == "0":
         exit_from_tool()
     else:
-        print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL)
+        print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL)
         time.sleep(1.5)
         random_message_generator()
 
@@ -248,7 +375,7 @@ def meaningless_message_generator():
         try :
             no_of_message = int(no_of_message)
         except:
-            print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL)
+            print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL)
             time.sleep(1.5)
             # Recall meaningless_message_generator if user enter wrong value
             meaningless_message_generator()
@@ -266,7 +393,7 @@ def meaningless_message_generator():
         try :
             message_length = int(message_length)
         except:
-            print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL)
+            print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL)
             time.sleep(1.5)
             # Recall meaningless_message_generator if user enter wrong value
             meaningless_message_generator()
@@ -299,11 +426,15 @@ def meaningless_message_generator():
             pyautogui.write(message)
             # send a messages
             pyautogui.press('enter')
-            print("Message Sended...") 
+            print("Message Sended...")
+        # Show message after Task is completed and Ask What is next task
+        print(Fore.GREEN + Style.BRIGHT + "The given task has been completed.\n\n"+ Style.RESET_ALL)
+        print(Fore.BLUE + Style.BRIGHT + "What is the next task?\nIf there are no more tasks, you can quit or exit the tool by using '0'."+ Style.RESET_ALL)
+        spammer() 
     elif user_is_ready == "0":
         exit_from_tool()
     else:
-        print(Fore.RED + "Invalid value entered. Please choose a valid number." + Style.RESET_ALL)
+        print(Fore.RED + "Invalid value entered. Please choose a valid number.\n" + Style.RESET_ALL)
         time.sleep(1.5)
         meaningless_message_generator()
 
@@ -345,9 +476,10 @@ def auto_typed_message():
 # Starting function of the tool
 def spammer(): 
     # Print options for the user to choose from
-    print(Fore.YELLOW + "\n\nChoose an option from the following:" + Style.RESET_ALL)
+    print(Fore.YELLOW + "Choose an option from the following:" + Style.RESET_ALL)
     print("[1] User typed message")
     print("[2] Auto typed message")
+    print("[4] Help")
     print("[0] Quite")
 
     # Handle any errors if occur
@@ -359,6 +491,8 @@ def spammer():
             user_typed_message()
         elif message_type == 2:
             auto_typed_message()
+        elif message_type == 4:
+            tool_help()
         elif message_type == 0:
             # Call the exit function
             exit_from_tool()
@@ -387,6 +521,7 @@ def exit_from_tool():
         end -= 1
     print("\n\n")
     os._exit(0)
+
 
 # Tool name designe
 name_of_tool = pyfiglet.figlet_format("WA-Spam")
