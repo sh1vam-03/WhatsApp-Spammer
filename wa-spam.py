@@ -9,6 +9,7 @@ import urllib.request
 import time
 import random
 import string
+import os
 
 
 # User is able to type a message and send what they want
@@ -385,6 +386,7 @@ def exit_from_tool():
         start += 1
         end -= 1
     print("\n\n")
+    os._exit(0)
 
 # Tool name designe
 name_of_tool = pyfiglet.figlet_format("WA-Spam")
