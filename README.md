@@ -91,5 +91,8 @@ Choose an option from the following:
   - **Meaningless Message Generator**: Sends random, nonsensical words of sentence as message.
   
 ## Contributing
-
 Contributions are welcome! Feel free to submit a pull request or open an issue if you have suggestions or improvements.
+
+## License
+This project is licensed under the [MIT License](./LICENSE).
+
