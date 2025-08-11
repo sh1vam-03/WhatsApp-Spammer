@@ -14,7 +14,7 @@ To set up **WA-Spam**, follow these steps:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/sh1vam.03/WhatsApp-Spammer.git
+git clone https://github.com/sh1vam-03/WhatsApp-Spammer.git
 
 cd WhatsApp-Spammer
 ```
@@ -51,7 +51,7 @@ Once you run the tool, you'll be presented with the following options:
    \ V  V / ___ \_____|__) | |_) | (_| | | | | | |
     \_/\_/_/   \_\   |____/| .__/ \__,_|_| |_| |_|
                            |_|   
-                                        -sh1vam.03
+                                        -sh1vam-03
 ```
 
 #### Main Menu:
@@ -95,4 +95,5 @@ Contributions are welcome! Feel free to submit a pull request or open an issue i
 
 ## License
 This project is licensed under the [MIT License](./LICENSE).
+
 
