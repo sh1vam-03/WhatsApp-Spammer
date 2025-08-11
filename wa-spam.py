@@ -536,7 +536,7 @@ random_color = random.choice(colors)
 name_of_tool_color = Console()
 
 name_of_tool_color.print(name_of_tool, style=random_color, end="\t\t\t\t\t-")
-print(Fore.GREEN + Style.BRIGHT + 'sh1vam.03'+ Style.RESET_ALL)
+print(Fore.GREEN + Style.BRIGHT + 'sh1vam-03'+ Style.RESET_ALL)
 
 # Start tool
 spammer()
