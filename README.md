@@ -8,7 +8,7 @@
 
 > ⚠️ **Disclaimer**: This tool is for educational purposes only. Spamming others without their consent is illegal and unethical. Use responsibly and respect others' privacy.
 
-![WA Spam GIF](https://i.ibb.co/FqDKZ2cH/WA-spam.gif)
+![WA Spam GIF](https://github.com/user-attachments/assets/a9075e62-61b8-43e8-848c-b72dabfdf696)
 
 
 ## Installation
@@ -98,6 +98,7 @@ Contributions are welcome! Feel free to submit a pull request or open an issue i
 
 ## License
 This project is licensed under the [MIT License](./LICENSE).
+
 
 
 
