@@ -8,7 +8,7 @@
 
 > ⚠️ **Disclaimer**: This tool is for educational purposes only. Spamming others without their consent is illegal and unethical. Use responsibly and respect others' privacy.
 
-![Tool Preview](https://media.licdn.com/dms/image/v2/D5622AQGHXGdwOgcIhQ/feedshare-shrink_2048_1536/B56ZloU4qgI8A0-/0/1758391943565?e=1761782400&v=beta&t=EdlCzVgEOiCD9NflkgskCcOm3iaKUcpduQERZfhrC2Q)
+![Tool Preview](https://raw.githubusercontent.com/sh1vam-03/WhatsApp-Spammer/refs/heads/main/preview/WA-spam.gif)
 
 ## Installation
 
