@@ -8,7 +8,8 @@
 
 > ⚠️ **Disclaimer**: This tool is for educational purposes only. Spamming others without their consent is illegal and unethical. Use responsibly and respect others' privacy.
 
-![Tool Preview](https://raw.githubusercontent.com/sh1vam-03/WhatsApp-Spammer/refs/heads/main/preview/WA-spam.gif)
+![Preview](https://iili.io/KE979qB.gif)
+
 
 ## Installation
 
@@ -97,5 +98,6 @@ Contributions are welcome! Feel free to submit a pull request or open an issue i
 
 ## License
 This project is licensed under the [MIT License](./LICENSE).
+
 
 
