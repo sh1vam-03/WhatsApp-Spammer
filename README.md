@@ -8,6 +8,8 @@
 
 > ⚠️ **Disclaimer**: This tool is for educational purposes only. Spamming others without their consent is illegal and unethical. Use responsibly and respect others' privacy.
 
+![Tool Preview](https://media.licdn.com/dms/image/v2/D5622AQGHXGdwOgcIhQ/feedshare-shrink_2048_1536/B56ZloU4qgI8A0-/0/1758391943565?e=1761782400&v=beta&t=EdlCzVgEOiCD9NflkgskCcOm3iaKUcpduQERZfhrC2Q)
+
 ## Installation
 
 To set up **WA-Spam**, follow these steps:
